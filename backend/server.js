@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose'); 
 const dotenv = require('dotenv'); 
 const cors = require('cors'); 
-const flowerRoutes = require('./routes/flowerRoutes')
+const flowerRoutes = require('./routes/flowerRoutes');
 
 dotenv.config(); 
 

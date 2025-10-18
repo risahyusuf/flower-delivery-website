@@ -25,19 +25,33 @@ const createFlower = async (req, res) => {
     const savedFlower = await newFlower.save();
     res.status(201).json(savedFlower);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map(val => val.message);
+      return res.status(400).json({ message: messages });
+    }
+    res.status(500).json({ message: 'Server error: ' + error.message });
   }
 };
 
 const deleteFlower = async (req, res) => {
   try {
-    const deletedFlower = await Flower.findByIdAndDelete(req.params.id);
+    const { id } = req.params;
+
+    // check if the ID is a valid MongoDB ObjectId
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return res.status(400).json({ message: 'Invalid flower ID format' });
+    }
+
+    const deletedFlower = await Flower.findByIdAndDelete(id);
+
     if (!deletedFlower) {
       return res.status(404).json({ message: 'Flower not found' });
     }
+
     res.status(200).json({ message: 'Flower deleted successfully' });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error('Error deleting flower:', error);
+    res.status(500).json({ message: 'An error occurred while deleting the flower' });
   }
 };
 
