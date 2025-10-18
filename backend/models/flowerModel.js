@@ -21,6 +21,10 @@ const flowerSchema = new mongoose.Schema ({
         required: true,
     },
 
+    image: {
+        type: String,
+    },
+    
 })
 
 const Flower = mongoose.model('Flower', flowerSchema);

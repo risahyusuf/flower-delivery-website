@@ -19,6 +19,7 @@ const createFlower = async (req, res) => {
       description,
       price,
       category,
+      image: req.file ? req.file.path : null,
     });
 
     const savedFlower = await newFlower.save();
