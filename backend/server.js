@@ -7,12 +7,12 @@ const flowerRoutes = require('./routes/flowerRoutes');
 
 dotenv.config(); 
 
-// Initialize the Express app 
+// Express app 
 const app = express(); 
 const PORT = process.env.PORT || 5000;
 
 
-// Middleware to parse JSON 
+// Middleware
 app.use(cors()); 
 app.use(express.json()); 
 
