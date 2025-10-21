@@ -31,22 +31,24 @@ MONGODB_URI=your_mongodb_connection_string_here
 - .env file is ignored in gitignore and not pushed to github
 
 ## API Endpoints
-- GET (Get all flowers) - http://localhost:5000/api/flowers
-- POST (Create flower) - http://localhost:5000/api/flowers
-- DELETE (Delete flower by id) - http://localhost:5000/api/flowers/:id
+- GET (Get all flowers) - https://flower-delivery-website-6n7s.onrender.com/api/flowers
+- POST (Create flower) - https://flower-delivery-website-6n7s.onrender.com/api/flowers
+- DELETE (Delete flower by id) - https://flower-delivery-website-6n7s.onrender.com/api/flowers/:id
 
 ## Run Server
 node server.js
 
  ## Live Demo
-Checkout the live demo of the project: [Live Demo]()
+Checkout the live demo of the project: [Live Demo](https://flower-delivery-website-6n7s.onrender.com)
 
 ## Loom Video
-Watch video [here]()
+Watch video [here1](https://www.loom.com/share/259380d95af84c81b0ff17517da27f50?sid=8a0d2ac4-66e5-470a-a03b-19aff71a8941) and
+[here2](https://www.loom.com/share/0b148b973d764032bea2198e1948349b?sid=313c168f-e83d-491c-b82e-2b7de645a840)
+
 
 ## Author
 Rabia Isah Yusuf
-[Github](https://github.com/risahyusuf)
+Github [risahyusuf](https://github.com/risahyusuf)
 
 
 
