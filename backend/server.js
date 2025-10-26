@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv'); 
 const cors = require('cors'); 
 const flowerRoutes = require('./routes/flowerRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 dotenv.config(); 
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 app.use('/api/flowers', flowerRoutes);
+app.use('/api/users', userRoutes);
 
 // Connect to MongoDB using Mongoose 
 mongoose.connect(process.env.MONGODB_URI) 
