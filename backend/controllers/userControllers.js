@@ -15,7 +15,7 @@ const registerUser = async (req, res) => {
     }
     // Input validation
      if (!validator.isEmail(email)) {
-    return res.status(400).json({ error: 'Invalid email format' });
+    return res.status(400).json({ message: 'Invalid email format' });
   }
   if (password.length < 6) {
     return res.status(400).json({ message: 'Password must be at least 6 characters' });
@@ -55,7 +55,7 @@ const loginUser = async (req, res) => {
     }
 
     // Create a JWT token
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id }, process.env.SECRET, { expiresIn: '1h' });
 
     // Return the token
     res.status(200).json({ token });
