@@ -7,7 +7,7 @@ const flowerRoutes = require('./routes/flowerRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 dotenv.config(); 
-
+console.log('JWT Secret:', process.env.JWT_SECRET);
 // Express app 
 const app = express(); 
 const PORT = process.env.PORT || 5000;
