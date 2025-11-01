@@ -1,7 +1,7 @@
 # Flower Delivery API
 
-This is a simple Flower Delivery API built using Node.js, Express, and MongoDB Atlas.  
-It allows you to create, get, and delete flower records, along with image uploads handled by Multer.
+This is a simple Flower Delivery API built using Node.js, Express, and MongoDB Atlas. It allows a user to register and loin the required credentials. It has a validator to validate email, bcrypt to hash passwords and jwt to return a token and protect routes.
+It allows you to create, get, and delete flower records, along with image uploads handled by Multer. 
 
 ## Features
 - Add new flowers with image uploads (using Multer)
@@ -45,13 +45,9 @@ node server.js
 Checkout the live demo of the project: [Live Demo](https://flower-delivery-website-6n7s.onrender.com)
 
 ## Loom Video
-Watch video [here]()
+Watch video [here](https://www.loom.com/share/ab34125c84f24e67b807fcd26c3875c0)
 
 
 ## Author
 Rabia Isah Yusuf
 Github [risahyusuf](https://github.com/risahyusuf)
-
-"name": "Risah Test",
-  "email": "risah@example.com",
-  "password": "123456789"
