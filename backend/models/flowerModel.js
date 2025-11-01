@@ -29,5 +29,4 @@ const flowerSchema = new mongoose.Schema ({
 })
 
 const Flower = mongoose.model('Flower', flowerSchema);
-
 module.exports = Flower;

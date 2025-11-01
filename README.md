@@ -1,7 +1,7 @@
 # Flower Delivery API
 
-This is a simple Flower Delivery API built using Node.js, Express, and MongoDB Atlas.  
-It allows you to create, get, and delete flower records, along with image uploads handled by Multer.
+This is a simple Flower Delivery API built using Node.js, Express, and MongoDB Atlas. It allows a user to register and loin the required credentials. It has a validator to validate email, bcrypt to hash passwords and jwt to return a token and protect routes.
+It allows you to create, get, and delete flower records, along with image uploads handled by Multer. 
 
 ## Features
 - Add new flowers with image uploads (using Multer)
@@ -31,9 +31,12 @@ MONGODB_URI=your_mongodb_connection_string_here
 - .env file is ignored in gitignore and not pushed to github
 
 ## API Endpoints
-- GET (Get all flowers) - https://flower-delivery-website-6n7s.onrender.com/api/flowers
-- POST (Create flower) - https://flower-delivery-website-6n7s.onrender.com/api/flowers
-- DELETE (Delete flower by id) - https://flower-delivery-website-6n7s.onrender.com/api/flowers/:id
+- Get all flowers - https://flower-delivery-website-6n7s.onrender.com/api/flowers
+- Create flower - https://flower-delivery-website-6n7s.onrender.com/api/flowers
+- Delete flower by id - https://flower-delivery-website-6n7s.onrender.com/api/flowers/:id
+
+- Register new user - https://flower-delivery-website-6n7s.onrender.com/api/users/register
+- Existing user login - https://flower-delivery-website-6n7s.onrender.com/api/users/login
 
 ## Run Server
 node server.js
@@ -42,14 +45,9 @@ node server.js
 Checkout the live demo of the project: [Live Demo](https://flower-delivery-website-6n7s.onrender.com)
 
 ## Loom Video
-Watch video [here1](https://www.loom.com/share/259380d95af84c81b0ff17517da27f50?sid=8a0d2ac4-66e5-470a-a03b-19aff71a8941) and
-[here2](https://www.loom.com/share/0b148b973d764032bea2198e1948349b?sid=313c168f-e83d-491c-b82e-2b7de645a840)
+Watch video [here](https://www.loom.com/share/ab34125c84f24e67b807fcd26c3875c0)
 
 
 ## Author
 Rabia Isah Yusuf
 Github [risahyusuf](https://github.com/risahyusuf)
-
-
-
-
